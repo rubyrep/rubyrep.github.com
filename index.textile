@@ -1,0 +1,33 @@
+---
+layout: default
+title: Home
+---
+h2. Mission
+
+*Development of an "open-source":license.html solution for asynchronous, master-master replication of relational databases that is*
+* *ridiculously easy to use*
+* *database independent*[1]
+
+fn1. Currently supports PostgreSQL and MySQL.
+
+h2. License
+
+Released as open source under the MIT "license":license.html. 
+
+h2. Status
+
+Production ready. (But not yet battle tested.)
+
+h2. Main Features
+
+* Can scan two databases for differences
+* Can sync two databases
+* Can continuously replicate between between two databases
+
+For the full feature list please click "here":features.html.
+
+h2. Demo
+
+From zero to running replication in under 5 minutes? Head to the "screencast":/screencast.html!
+
+

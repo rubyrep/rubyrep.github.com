@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+    <meta name="Description" content="Open source software to provide two-way replication of relational databases." />
+    <meta name="Keywords" content="database replication, PostgreSQL, MySQL" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="Distribution" content="Global" />
+    <meta name="Author" content="Arndt Lehmann" />
+    <meta name="Robots" content="index,follow" />
+
+    <link rel="stylesheet" href="/ressources/CoolWater.css" type="text/css" />
+    <script type="text/javascript" src="/ressources/onload.js"></script>  
+
+    <script type="text/javascript" src="ressources/shCore.js"></script>
+    <script type="text/javascript" src="ressources/shBrushRuby.js"></script>
+    <script type="text/javascript" src="ressources/shBrushPlain.js"></script>
+    <script type="text/javascript" src="ressources/shBrushSql.js"></script>
+    <link type="text/css" rel="stylesheet" href="ressources/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="ressources/shThemeDefault.css"/>
+    <script type="text/javascript">
+        SyntaxHighlighter.config.clipboardSwf = 'ressources/clipboard.swf';
+	SyntaxHighlighter.config.tagName = 'code';
+	SyntaxHighlighter.all();
+    </script>
+
+
+    <title>rubyrep: {{ page.title }}</title>
+    
+</head>
+
+<body onLoad="myinit()">
+<!-- wrap starts here -->
+<div id="wrap">
+        
+    <!--header -->
+    <div id="header">            
+        <h1 id="logo-text"><a href="index.html">rubyrep</a></h1>        
+        <p id="slogan">(Database replication that doesn't hurt.)</p>        
+            
+        <div id="header-links">
+            <p>
+            <a href="/index.html">Home</a> | 
+            <a href="/blog.html">Blog</a>            
+            </p>        
+        </div>        
+                        
+    </div>
+        
+    <!-- navigation -->    
+    <div id="menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/features.html">Features</a></li>
+            <li><a href="/documentation.html">Documentation</a></li>
+            <li><a href="/contribute.html">Contribute</a></li>
+            <li><a href="http://github.com/rubyrep/rubyrep">Code</a></li>
+            <li><a href="/blog.html">Blog</a></li>            
+            <li><a href="/about.html">About</a></li>        
+        </ul>
+    </div>                    
+            
+    <!-- content-wrap starts here -->
+    <div id="content-wrap">
+        
+        <div id="main">    
+	    {% if page.author %} 
+	        <!-- this is a blog post -->
+	        <h2>{{ page.title }}</h2>
+	        <p class="post-by">posted by: {{ page.author }}</p>
+	    {% endif %}
+	    {{ content }}
+	    {% if page.author %}
+		{% include intense_debate.html %}
+	    {% endif %}
+        </div>
+        
+            
+        <div id="sidebar">
+            
+            <h2>Search Box</h2>    
+            <form action="http://www.google.com/cse" class="searchform" id="cse-search-box">
+                <p>
+                    <input type="hidden" name="cx" value="005098483526677694919:gnzp_jex--m" />
+                    <input type="hidden" name="ie" value="UTF-8" />
+                    <input type="text" class="textbox" name="q" size="31" />
+                    <input type="submit" class="button" name="sa" value="Search" />
+                </p>
+            </form>
+            <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>
+
+            <div id=TOC style="display:none">
+                <h2>On this Page</h2>
+            </div>
+            
+            <h2>Quick Links</h2>
+            <ul class="sidemenu">
+                <li>Issue Tracker</li>
+		<li><a href="http://groups.google.com/group/rubyrep">Mailing List</a></li>
+		<li><a href="/installation.html">Installation</a></li>
+                <li><a href="/tutorial.html">Tutorial</a></li>
+                <li><a href="http://rubyrep.rubyforge.org">API Documentation</a></li>
+            </ul>
+
+        </div>
+                
+    <!-- content-wrap ends here -->    
+    </div>
+                    
+    <!--footer starts here-->
+    <div id="footer">
+            
+        <p>
+        &copy; 2009 <strong>Arndt Lehmann</strong>
+       </p>
+                
+    </div>    
+
+<!-- wrap ends here -->
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7487138-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

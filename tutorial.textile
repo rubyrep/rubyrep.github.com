@@ -1,0 +1,23 @@
+---
+layout: default
+title: Tutorial
+---
+h2. Tutorial
+
+Step-by-step instructions for common tasks.
+
+h2. Basic Tasks
+
+* "Installation":installation.html
+* "Scanning":scanning.html two databases for differences
+* "Syncing":syncing.html two databases
+* Setting up continuous "replication":replication.html between two databases
+
+h2. Advanced Tasks
+
+* "Dealing with tables without primary keys":manually_specifying_key_columns.html.
+* Executing custom behavior "before or after a table sync":sync_hooks.html.
+* Scanning or syncing between two databases with "minimal network load":using_rubyrep_proxies.html.
+  (Only actualy differences go through the network; good for off-site installations.)
+* Replication between "more than two databases":replication_between_more_than_two_databases.html.
+* Coordinating rubyrep triggers with "application specific triggers":coordinating_with_application_specific_triggers.html.
