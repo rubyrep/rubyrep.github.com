@@ -1,7 +1,0 @@
----
-layout: default
-title: Test Post 3
-author: Arndt Lehmann
----
-One more test blog post.
-

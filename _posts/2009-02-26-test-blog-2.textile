@@ -1,9 +1,0 @@
----
-layout: default
-title: Test Post 2
-author: Arndt Lehmann
----
-
-This is the second test post.
-Here comes more text.
-Bla. Bla.

@@ -1,9 +1,0 @@
----
-layout: default
-title: Test Post
-author: Arndt Lehmann
----
-
-This is a test post.
-
-h3. blaaaa

@@ -1,0 +1,8 @@
+---
+layout: default
+title: Initial release
+author: Arndt Lehmann
+---
+It took more than one year and a half. But here it finally is. An open source solution for ridiculously easy setup of master-master replication of releational databases.
+
+Want to see how to set up replication in under 5 minutes? Head to the "screencast":screencast.html. Enjoy.
