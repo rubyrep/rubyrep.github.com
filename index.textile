@@ -10,7 +10,7 @@ h2. Mission
 
 fn1. Currently supports PostgreSQL and MySQL.
 
-h2. License
+h2. "License":license.html
 
 Released as open source under the MIT "license":license.html. 
 
@@ -26,8 +26,8 @@ h2. Main Features
 
 For the full feature list please click "here":features.html.
 
-h2. Demo
+h2. "Demo":screencast.html
 
-From zero to running replication in under 5 minutes? Head to the "screencast":/screencast.html!
+From zero to running replication in under 5 minutes? Head to the "screencast":screencast.html!
 
 
