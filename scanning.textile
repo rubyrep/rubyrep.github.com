@@ -91,4 +91,4 @@ h2. Appendix: Further Information
 A scan can not only print scarce summaries as shown above.
 Refer to the "scan command reference":scan_command.html to see how rubyrep can show more detailed scan summaries as well as actual row differences.
 
-Go to the "configuration reference":configuration_reference.html to see a list of all available configuration options.
+Go to the "configuration reference":configuration.html to see a list of all available configuration options.

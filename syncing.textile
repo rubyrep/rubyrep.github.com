@@ -115,5 +115,5 @@ h2. Appendix D: Further Information
 
 Refer to the "sync command reference":sync_command.html for the complete reference to the sync command.
 
-Go to the "configuration reference":configuration_reference.html to see a list of all available configuration options.
+Go to the "configuration reference":configuration.html to see a list of all available configuration options.
 
