@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Scanning two databases for differences
+title: Syncing two databases for differences
 ---
 h2. Syncing two databases
 
@@ -51,7 +51,7 @@ Examples
   All records that only exist in the left database will be ignored
 * @config.add_table_options /^e/, :sync_conflict_handing => :update_right@
   If there is a conflict in any table starting with 'e', update the right database.
-* @config.include_tables 'dept', :left_record_handling => :ignore, :right_record_handling => :ignore, :sync_conflict_handling => :update_left@
+* @config.include_tables 'dept', :left_record_handling => :ignore, :right_record_handling => :ignore, :sync_conflict_handling => :right_wins@
   This sets up many behaviors at the same time:
 ** Add table 'dept' to the tables that will be synced.
 ** For table 'dept', ignore records that only exist in one of the databases
