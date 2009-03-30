@@ -38,3 +38,4 @@ I have to thanks the following persons whose great works make this software poss
 Last but _not_ least: 
 Without my work at TUV Rheinland Japan I would never have developed the itch that led to the development of rubyrep.
 It also offered ample opportunities to evaluate rubyrep under production conditions.
+And TUV Rheinland Japan kindly supports the hosting of this project.
