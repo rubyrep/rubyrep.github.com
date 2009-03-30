@@ -21,7 +21,6 @@ RR::Initializer::run do |config|
   ...
   
   config.options[:sync_conflict_handling] = :right_wins
-  config.add_table_options 'emp', :sync_conflict_handling => :left_wins
  
   ...
     
@@ -69,4 +68,4 @@ h2. List of configuration settings
 
 fn1. True unless output is not going to a terminal OR running under Windows.
 
-|_. |Note|There are a few more settings that have not been mentioned here. These require a good understanding of rubyrep interna. There are documented in the "RDoc":http://rubyrep.rubyforge.org/classes/RR/Configuration.html.|
+|_. |Note|There are a few more settings that have not been mentioned here. These require a good understanding of rubyrep interna. They are documented in the "RDoc":http://rubyrep.rubyforge.org/classes/RR/Configuration.html.|
