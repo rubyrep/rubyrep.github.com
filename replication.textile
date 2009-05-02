@@ -56,7 +56,7 @@ Handling of non-conflicting "left" (@:left_change_handling@) or "right" (@:right
 * ruby @Proc@ object: specify custom behavior. Refer to the "RDoc":http://rubyrep.rubyforge.org/classes/RR/Replicators/TwoWayReplicator.html on how to do this.
 
 Handling of conflicts (@:replication_conflict_handling@):
-* @:ignore@: no action (*default behavior*
+* @:ignore@: no action (*default behavior*)
 * @:left_wins@: apply the change from the "left" database to the "right"
 * @:right_wins@: apply the change from the "right" database to the "left"
 * @:later_wins@: the more recent change will prevail.
@@ -115,10 +115,10 @@ RR::Initializer::run do |config|
     :host     => '172.16.1.2'
   }
   
-  config.options[:sync_conflict_handling] = :update_left
-  config.options[:replication_conflict_handling] = :left_wins
+  config.options[:sync_conflict_handling] = :right_wins
+  config.options[:replication_conflict_handling] = :right_wins
   config.add_table_options 'emp', 
-    :sync_conflict_handling => :update_right,
+    :sync_conflict_handling => :left_wins,
     :replication_conflict_handling => :left_wins
    
   config.include_tables /./
