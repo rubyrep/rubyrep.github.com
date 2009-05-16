@@ -44,10 +44,10 @@ A rubyrep sync / replication run will process according to the following steps[1
 # Start a transaction
 # Create a marker record in the activity marker table
 # Apply sync / replication changes
-# Delete the mark record from the activity marker table
+# Delete the marker record from the activity marker table
 # Commit the transaction
 
-[1] Depending on the @:commit_frequency@ paramter and the amount of changes, there will be more than one tranaction. But the concept stays the same.
+[1] Depending on the @:commit_frequency@ paramter and the amount of changes, there will be more than one transaction. But the concept stays the same.
 
 This means that application application specific triggers can detect rubyrep activity by checking if the activity marker table is *not* empty.
 
