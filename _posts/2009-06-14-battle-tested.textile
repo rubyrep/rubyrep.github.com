@@ -1,0 +1,7 @@
+---
+layout: default
+title: "Battle tested"
+author: Arndt Lehmann
+---
+I have been using rubyrep for one of our production applications since April. Another one just went online on Friday.
+So having fulfilled the definition of the word, I hereby declare rubyrep *battle tested*.

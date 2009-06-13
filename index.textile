@@ -16,7 +16,7 @@ Released as open source under the MIT "license":license.html.
 
 h2. Status
 
-Production ready. (But not yet battle tested.)
+Production ready. "Battle tested.":2009/06/14/battle-tested.html <del>(But not yet battle tested.)</del>
 
 h2. Main Features
 
