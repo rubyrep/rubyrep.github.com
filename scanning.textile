@@ -63,7 +63,7 @@ Different forms are possible:
   e. g. table 'dept' in left and table 'dept_backup' in right database: @config.include_tables 'dept, dept_backup'@
 
 Additionally it is possible to exclude tables. Excludes always trump includes.
-Example: To match all tables except those ending with "backup":
+Example: To match all tables except those ending with 'backup':
 
 <code class="brush: ruby; gutter: false">
 config.include_tables /./
