@@ -13,7 +13,8 @@ This is done with command
 @rubyrep generate myrubyrep.conf@
 
 This will generate a configuration file skeleton like this:
-<pre style="font-size:130%;margin-top:-30px; margin-left:20px;margin-right:25px"> <code class="brush: ruby; gutter: false">
+
+<code class="brush: ruby; gutter: false">
 RR::Initializer::run do |config|
   config.left = {
     :adapter  => 'postgresql', # or 'mysql'
@@ -35,7 +36,7 @@ RR::Initializer::run do |config|
   config.include_tables /^e/ # regexp matches all tables starting with e
   # config.include_tables /./ # regexp matches all tables
 end
-</code> </pre>
+</code>
 
 Please note that this is valid ruby code. So you can do whatever you want.
 
@@ -53,6 +54,7 @@ h2. Step 3: Configure which tables to scan
 
 Use the @include_tables@ option to specify which tables should be covered.
 Different forms are possible:
+
 * single table: just specify the table name, 
   e. g. @config.include_tables 'dept'@
 * multiple tables: specify any regular expression, 
@@ -62,10 +64,11 @@ Different forms are possible:
 
 Additionally it is possible to exclude tables. Excludes always trump includes.
 Example: To match all tables except those ending with "backup":
-<pre style="font-size:130%;margin-top:-30px; margin-left:20px;margin-right:25px"> <code class="brush: ruby; gutter: false">
+
+<code class="brush: ruby; gutter: false">
 config.include_tables /./
 config.exclude_tables /backup$/
-</code></pre>
+</code>
 
 h2. Step 4: Run the scan
 
@@ -77,10 +80,11 @@ E. g. to scan 'dept' and all tables starting with 'e':
 @rubyrep scan -c myrubyrep.conf dept /^e/@
 
 A scan with default options will produce output like this:
-<pre style="font-size:130%;margin-top:-30px; margin-left:20px;margin-right:25px"> <code class="brush: plain; gutter: false">
+
+<code class="brush: plain; gutter: false">
                                 dept 100% .........................   0
                                  emp 100% .........................   1
-</code></pre>
+</code>
 
 Here the 'dept' table is fully in sync, while table 'emp' has one difference.
 (The dots and percentage values are printed during the scan to show the progress.)

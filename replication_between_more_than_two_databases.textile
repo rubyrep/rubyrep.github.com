@@ -8,6 +8,7 @@ Basically rubyrep can only scan / sync / replicate betwee two databases.
 However there is a simple approach possible to keep more than two databases in sync.
 
 Example:
+
 * Scenario: The databases A, B and C should be kept in sync.
 * Solution:
 ** A replicates with C

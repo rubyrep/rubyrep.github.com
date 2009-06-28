@@ -28,7 +28,8 @@ rubyrep is intended to be that solution.
 h2. Thanks
 
 Additionally this project was not made in a vacuum. 
-I have to thanks the following persons whose great works make this software possible:
+I have to thank the following persons whose great works make this software possible:
+
 * "Yukihiro 'matz' Matsumoto":http://www.rubyist.net/~matz/ for developing "Ruby":http://www.ruby-lang.org, an incredibly powerful, yet easy to use programming language.
 * "Charles Oliver Nutter":http://blog.headius.com/ for developing "JRuby":http://jruby.codehaus.org/.
   Thanks to JRuby rubyrep can be used everywhere where Java runs (i.e. everywhere).

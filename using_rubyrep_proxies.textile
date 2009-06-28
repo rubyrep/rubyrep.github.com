@@ -8,10 +8,12 @@ When scanning or syncing two databases, by default the complete data are transfe
 For off-site databases that are reachable via low-bandwidth or high-latency networks, this doesn't scale.
 
 rubyrep can be operated in a proxy mode where 
+
 * most of the processing is done on the database servers itself and
 * only actual differences go through the network
 
 Basic approach:
+
 # Start "rubyrep proxies":proxy_command.html on the remote database servers. 
   (Or computers that are "near" to them.)
 # In the rubyrep connection parameters, specify the proxy host and port.
@@ -23,7 +25,8 @@ h2. Example
 Scenario: the "right" database is off-site and only reachable via a low-bandwidth connection.
 
 Step 1: Modify the database connection parameters
-<pre style="font-size:130%;margin-top:-30px; margin-left:20px;margin-right:25px"> <code class="brush: ruby; gutter: false; highlight: [16, 17]">
+
+<code class="brush: ruby; gutter: false; highlight: [16, 17]">
 RR::Initializer::run do |config|
   config.left = { 
     :adapter  => 'postgresql', # or 'mysql'
@@ -47,13 +50,13 @@ RR::Initializer::run do |config|
   config.include_tables /^e/ # regexp matches all tables starting with e
   # config.include_tables /./ # regexp matches all tables
 end
-</code> </pre>
+</code>
 
 Step 2: Start the rubyrep proxy on the "right" database server
-<pre style="font-size:130%;margin-top:-30px; margin-left:20px;margin-right:25px"> <code class="brush: plain; gutter: false">
-  
+
+<code class="brush: plain; gutter: false">
 rubyrep proxy
-</code> </pre>
+</code>
 
 Step 3: None. rubyrep will work as normal (but use less bandwidth).
 

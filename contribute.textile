@@ -7,6 +7,7 @@ h2. Contribute
 You are heartily invited to contribute to this project.
 
 To that end, just fork the according github repositories:
+
 * "source code":http://github.com/rubyrep/rubyrep
 * "project website":http://github.com/rubyrep/rubyrep.github.com
 

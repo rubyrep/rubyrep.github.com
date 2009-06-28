@@ -9,19 +9,21 @@ Those keys can be single columns or combinations of multiple columns.
 
 By default, rubyrep will using the primary key columns of the according table.
 If a table does not have a primary key, it can be manually specified using
+
 * @:key@ option or 
 * @:auto_key_limit@ option
 
 h2. :key option
 
 Usage examples:
-<pre style="font-size:130%;margin-top:-30px; margin-left:20px;margin-right:25px"> <code class="brush: ruby; gutter: false">
+
+<code class="brush: ruby; gutter: false">
   
 ...  
 config.include_tables 'articles', :key => 'id'
 config.include_tables 'articles_tags', :key => ['article_id', 'tag_id']
 ...   
-</code> </pre>
+</code>
 
 
 h2. :auto_key_limit option
@@ -30,14 +32,15 @@ If you have many e. g. many-to-many relationship tables, all of them without pri
 @:auto_key_limit@ is a convenience option to address this problem.
 
 It basically says, that if a table
+
 * has no primary key and
 * not more than the specified number of columns
 
 then rubyrep shall automatically consider the combination of all columns of the table as unique. 
 
 E. g. all of the options in the following example are equivalent (but with the @:auto_key_limit@ versions applying to potentially more than one table):
-<pre style="font-size:130%;margin-top:-30px; margin-left:20px;margin-right:25px"> <code class="brush: ruby; gutter: false">
-  
+
+<code class="brush: ruby; gutter: false">
 ...  
   
  # applies to all tables with not more than 2 columns and 
@@ -51,5 +54,5 @@ config.add_table_options /_/, :auto_key_limit => 2
 config.include_tables 'articles_tags', :key => ['article_id', 'tag_id']
   
 ...   
-</code> </pre>
+</code>
 

@@ -11,11 +11,13 @@ This page lists all available configuration settings.
 h2. Global vs. table specific settings
 
 The configuration parameters come in two types
+
 * global (apply to all tables)
 * table specific
 
 Global configuration settings are specified as in the following example:
-<pre style="font-size:130%;margin-top:-30px; margin-left:20px;margin-right:25px"> <code class="brush: ruby; gutter: false">
+
+<code class="brush: ruby; gutter: false">
 RR::Initializer::run do |config|
   
   ...
@@ -25,10 +27,11 @@ RR::Initializer::run do |config|
   ...
     
 end
-</code> </pre>
+</code>
 
 Table specific options can be specified either as global default settings (same form as above) or for specific tables:
-<pre style="font-size:130%;margin-top:-30px; margin-left:20px;margin-right:25px"> <code class="brush: ruby; gutter: false">
+
+<code class="brush: ruby; gutter: false">
   
 ...  
   
@@ -38,7 +41,7 @@ config.include_tables 'dept',
   :logged_sync_events => :ignored_changes
   
 ...   
-</code> </pre>
+</code>
 
 In the first form above, only the option is set; in the second the "dept" table will also be added to the configured tables list.
 
@@ -68,4 +71,4 @@ h2. List of configuration settings
 
 fn1. True unless output is not going to a terminal OR running under Windows.
 
-|_. |Note|There are a few more settings that have not been mentioned here. These require a good understanding of rubyrep interna. They are documented in the "RDoc":http://rubyrep.rubyforge.org/classes/RR/Configuration.html.|
+|_.&nbsp; |Note|There are a few more settings that have not been mentioned here. These require a good understanding of rubyrep interna. They are documented in the "RDoc":http://rubyrep.rubyforge.org/classes/RR/Configuration.html.|

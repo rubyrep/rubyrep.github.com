@@ -13,6 +13,7 @@ Replication is no more difficult to set up than scanning or syncing.
 Specifically a configuration file created as per ""Scanning two databases for differences"":scanning.html can be used straight away to start replication.
 
 Such a replication will use the following default policy:
+
 * non-conflicting changes are replicated to the other database.
 * conflicting changes are ignored.
 
@@ -22,6 +23,7 @@ To start the replication, execute: @rubyrep replicate -c myrubyrep.conf@
 This will continously replicate all configured tables.
 
 When the replication is started, the following will happen automatically:
+
 # rubyrep will set up necessary infrastructure tables (if not yet existing).
 # rubyrep will check if any configured tables do not yet have a rubyrep trigger.
   For each such table
@@ -51,11 +53,13 @@ h2. Appendix A: Tweaking the replication policy
 If the replication policy as explained above is not suitable for your setup, you can modify it. 
 
 Handling of non-conflicting "left" (@:left_change_handling@) or "right" (@:right_change_handling@) changes (covers inserts, updates and deletes):
+
 * @:ignore@: no action
 * @:replicate@: apply the change to the other database (*default behaviour*)
 * ruby @Proc@ object: specify custom behavior. Refer to the "RDoc":http://rubyrep.rubyforge.org/classes/RR/Replicators/TwoWayReplicator.html on how to do this.
 
 Handling of conflicts (@:replication_conflict_handling@):
+
 * @:ignore@: no action (*default behavior*)
 * @:left_wins@: apply the change from the "left" database to the "right"
 * @:right_wins@: apply the change from the "right" database to the "left"
@@ -64,6 +68,7 @@ Handling of conflicts (@:replication_conflict_handling@):
 * ruby @Proc@ object: specify custom behavior. Refer to the "RDoc":http://rubyrep.rubyforge.org/classes/RR/Replicators/TwoWayReplicator.html on how to do this.
 
 Examples
+
 * @config.options[:left_change_handling] = :ignore@
   Changes in the "left" database will *not* be applied to the "right" database.
 * @config.add_table_options /^e/, :replication_conflict_handing => :left_wins@
@@ -75,29 +80,32 @@ Rubyrep can log replication events to the rubyrep event log table in the "left" 
 This table is automatically created during the first replication. Normally the table is named "rr_logged_events".
 
 The default logging policy is to log only ignored conflicts. This can be modified with the @:logged_replication_events@ option:
+
 * @:ignored_changes@: log ignored (but not synced) non-conflict changes
 * @:all_changes@: log all non-conflict changes
 * @:ignored_conflicts@: log ignored (but not synced) conflicts
 * @:all_conflicts@: log all conflicts
 
 To activate multiple options, specify them in an array:
-<pre style="font-size:130%;margin-top:-30px; margin-left:20px;margin-right:25px"> <code class="brush: ruby; gutter: false">
+
+<code class="brush: ruby; gutter: false">
 ...
 config.options[:logged_replication_events] = [
   :ignored_changes, 
   :ignored_conflicts
 ]
 ...
-</code> </pre>
+</code>
 
 h2. Appendix C: Complete Example
 
 A sync with the following configuration file would
+
 * replicates all tables
 * resolve conflicts by updating the left database
 * except table 'emp': here in case of conflicts the right database is updated
 
-&nbsp; <pre style="font-size:130%;margin-top:-30px; margin-left:20px;margin-right:25px"> <code class="brush: ruby; gutter: false">
+&nbsp; <code class="brush: ruby; gutter: false">
 RR::Initializer::run do |config|
   config.left = {
     :adapter  => 'postgresql', # or 'mysql'
@@ -123,7 +131,7 @@ RR::Initializer::run do |config|
    
   config.include_tables /./
 end
-</code> </pre>
+</code>
 
 h2. Appendix D: Further Information
 
