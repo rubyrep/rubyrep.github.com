@@ -5,6 +5,7 @@ title: Home
 h2. Mission
 
 *Development of an "open-source":license.html solution for asynchronous, master-master replication of relational databases that is*
+
 * *ridiculously easy to use*
 * *database independent*[1]
 
