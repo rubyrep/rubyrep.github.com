@@ -12,7 +12,7 @@ If you just want to get started in the quickest way, choose JRuby.
 
 For more background information, here a comparison between both flavors:
 
-|_. |_. Standard Ruby flavor|_. JRuby flavor|
+|_. &nbsp; |_. Standard Ruby flavor|_. JRuby flavor|
 |Capabilities|\2=. exactly the same|
 |Performance|slower|*faster* (by about one third)[1]|
 |Ease of installation|harder|*easier* (more "info":installation.html)| 
