@@ -19,6 +19,6 @@ Effectively this is a replication in the star schema and an arbitrary number of 
 To accomplish this, the @:rep_prefix@ of all replication setups has to be kept unique. 
 (This will ensure that each replication uses it's own triggers, change log tables, etc.)
 
-|_. |Hint|Use the ruby "@require@":http://www.ruby-doc.org/core/classes/Kernel.html command to keep the rubyrep config files DRY(Don't repeat yourself).|
+|_. &nbsp; |Hint|Use the ruby "@require@":http://www.ruby-doc.org/core/classes/Kernel.html command to keep the rubyrep config files DRY(Don't repeat yourself).|
 
-|_. |Important|MySQL only supports one after trigger per table. This means that above approach is not possible with MySQL|
+|_. &nbsp; |Important|MySQL only supports one after trigger per table. This means that above approach is not possible with MySQL|

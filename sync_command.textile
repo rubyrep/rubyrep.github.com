@@ -7,7 +7,7 @@ h2. Sync Command Reference
 Syncs the differences between matching tables of 'left' and 'right' database.
 This is the complete command reference. For background explanations please check the "sync tutorial":syncing.html.
 
-|_. |Note|If this looks very similar to the "scan command":scan_command.html then because it is.<br/>The command line options are exactly the same.|
+|_. &nbsp; |Note|If this looks very similar to the "scan command":scan_command.html then because it is.<br/>The command line options are exactly the same.|
 
 h2. Usage
 

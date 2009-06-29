@@ -60,4 +60,4 @@ rubyrep proxy
 
 Step 3: None. rubyrep will work as normal (but use less bandwidth).
 
-|_. |Note|rubyrep replications will also work as normal. But not profit in reduced bandwidth or network round-trips.|
+|_. &nbsp; |Note|rubyrep replications will also work as normal. But not profit in reduced bandwidth or network round-trips.|

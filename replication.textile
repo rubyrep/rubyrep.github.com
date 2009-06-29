@@ -41,7 +41,7 @@ h2. Step 3: Stopping the replication
 
 The process started in step 2 will not terminate. To stop the replication, kill the process. The replicate command will gracefully exit.
 
-|_. |Note| Even after the replication is stopped, all changes are still logged via the triggers created by rubyrep.<br/> After the replication is restarted, all pending changes will automatically be replicated.|
+|_. &nbsp; |Note| Even after the replication is stopped, all changes are still logged via the triggers created by rubyrep.<br/> After the replication is restarted, all pending changes will automatically be replicated.|
 
 h2. Step 4: Uninstall the replication
 
