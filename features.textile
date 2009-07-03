@@ -68,7 +68,7 @@ h2. Replication Features
 rubyrep can continously replicate changes between left and right databases.
 
 * Automatically sets up necessary triggers, log tables, etc.
-* Automatically discovers newly added tables and executes the initial syncs of those tables
+* Automatically discovers newly added tables and synchronizes the table content
 * Automatically reconfigures sequences to avoid duplicate key conflicts
 * Tracks changes to primary key columns
 * Can implement both master-slave and master-master replication
