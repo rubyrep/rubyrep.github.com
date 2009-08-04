@@ -88,14 +88,14 @@ The default logging policy is to log only ignored conflicts. This can be modifie
 
 To activate multiple options, specify them in an array:
 
-<code class="brush: ruby; gutter: false">
+<pre><code class="brush: ruby; gutter: false">
 ...
 config.options[:logged_replication_events] = [
   :ignored_changes, 
   :ignored_conflicts
 ]
 ...
-</code>
+</code></pre>
 
 h2. Appendix C: Complete Example
 
@@ -105,7 +105,7 @@ A sync with the following configuration file would
 * resolve conflicts by updating the left database
 * except table 'emp': here in case of conflicts the right database is updated
 
-&nbsp; <code class="brush: ruby; gutter: false">
+<pre><code class="brush: ruby; gutter: false">
 RR::Initializer::run do |config|
   config.left = {
     :adapter  => 'postgresql', # or 'mysql'
@@ -114,7 +114,7 @@ RR::Initializer::run do |config|
     :password => 'tiger',
     :host     => '172.16.1.1'
   }
-  
+    
   config.right = {
     :adapter  => 'postgresql',
     :database => 'SCOTT',
@@ -128,10 +128,10 @@ RR::Initializer::run do |config|
   config.add_table_options 'emp', 
     :sync_conflict_handling => :left_wins,
     :replication_conflict_handling => :left_wins
-   
   config.include_tables /./
+ 
 end
-</code>
+</code></pre>
 
 h2. Appendix D: Further Information
 

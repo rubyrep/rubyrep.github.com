@@ -76,14 +76,14 @@ The default logging policy is to log only ignored conflicts. This can be modifie
 
 To activate multiple options, specify them in an array:
 
-<code class="brush: ruby; gutter: false">
+<pre><code class="brush: ruby; gutter: false">
 ...
 config.options[:logged_sync_events] = [
   :ignored_changes, 
   :ignored_conflicts
 ]
 ...
-</code>
+</code></pre>
 
 h2. Appendix C: Complete Example
 
@@ -93,7 +93,7 @@ A sync with the following configuration file would
 * resolve conflicts by updating the left database
 * except table 'emp': here in case of conflicts the right database is updated
 
-<code class="brush: ruby; gutter: false">
+<pre><code class="brush: ruby; gutter: false">
 RR::Initializer::run do |config|
   config.left = {
     :adapter  => 'postgresql', # or 'mysql'
@@ -116,7 +116,7 @@ RR::Initializer::run do |config|
    
   config.include_tables /./
 end
-</code>
+</code></pre>
 
 h2. Appendix D: Further Information
 

@@ -17,13 +17,13 @@ h2. :key option
 
 Usage examples:
 
-<code class="brush: ruby; gutter: false">
+<pre><code class="brush: ruby; gutter: false">
   
 ...  
 config.include_tables 'articles', :key => 'id'
 config.include_tables 'articles_tags', :key => ['article_id', 'tag_id']
 ...   
-</code>
+</code></pre>
 
 
 h2. :auto_key_limit option
@@ -40,7 +40,7 @@ then rubyrep shall automatically consider the combination of all columns of the 
 
 E. g. all of the options in the following example are equivalent (but with the @:auto_key_limit@ versions applying to potentially more than one table):
 
-<code class="brush: ruby; gutter: false">
+<pre><code class="brush: ruby; gutter: false">
 ...  
   
  # applies to all tables with not more than 2 columns and 
@@ -54,5 +54,5 @@ config.add_table_options /_/, :auto_key_limit => 2
 config.include_tables 'articles_tags', :key => ['article_id', 'tag_id']
   
 ...   
-</code>
+</code></pre>
 

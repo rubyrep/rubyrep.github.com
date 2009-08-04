@@ -26,7 +26,7 @@ Scenario: the "right" database is off-site and only reachable via a low-bandwidt
 
 Step 1: Modify the database connection parameters
 
-<code class="brush: ruby; gutter: false; highlight: [16, 17]">
+<pre><code class="brush: ruby; gutter: false; highlight: [16, 17]">
 RR::Initializer::run do |config|
   config.left = { 
     :adapter  => 'postgresql', # or 'mysql'
@@ -50,13 +50,13 @@ RR::Initializer::run do |config|
   config.include_tables /^e/ # regexp matches all tables starting with e
   # config.include_tables /./ # regexp matches all tables
 end
-</code>
+</code></pre>
 
 Step 2: Start the rubyrep proxy on the "right" database server
 
-<code class="brush: plain; gutter: false">
+<pre><code class="brush: plain; gutter: false">
 rubyrep proxy
-</code>
+</code></pre>
 
 Step 3: None. rubyrep will work as normal (but use less bandwidth).
 

@@ -17,7 +17,7 @@ The configuration parameters come in two types
 
 Global configuration settings are specified as in the following example:
 
-<code class="brush: ruby; gutter: false">
+<pre><code class="brush: ruby; gutter: false">
 RR::Initializer::run do |config|
   
   ...
@@ -27,11 +27,11 @@ RR::Initializer::run do |config|
   ...
     
 end
-</code>
+</code></pre>
 
 Table specific options can be specified either as global default settings (same form as above) or for specific tables:
 
-<code class="brush: ruby; gutter: false">
+<pre><code class="brush: ruby; gutter: false">
   
 ...  
   
@@ -41,7 +41,7 @@ config.include_tables 'dept',
   :logged_sync_events => :ignored_changes
   
 ...   
-</code>
+</code></pre>
 
 In the first form above, only the option is set; in the second the "dept" table will also be added to the configured tables list.
 
