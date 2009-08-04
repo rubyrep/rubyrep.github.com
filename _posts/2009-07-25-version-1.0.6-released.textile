@@ -1,0 +1,14 @@
+---
+layout: default
+title: "rubyrep version 1.0.6 released"
+author: Arndt Lehmann
+---
+Quick update: I have released version 1.0.6 of rubyrep.
+Changes:
+
+* Bug fix: rubyrep does not assume anymore that replication events appear in the @rr_pending_changes@ table in sequential order.
+  (This could lead to some changes being left behind and only getting picked up after a replication restart.)
+* Feature: the replication daemon is now more resilient towards network timeouts.
+  (I. e. less likely to get stuck.)
+* Feature: introduction of an @:after_infrastructure_setup@ handler that allows users to execute custom code after infrastructure tables are created.
+  (Useful to e. g. grant additional database users access to the @rr_pending_changes@ table.)
