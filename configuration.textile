@@ -62,6 +62,7 @@ h2. List of configuration settings
 |\4=. *Replication specific settings*|
 |@:rep_prefix@| &nbsp; |'rr'|The prefix that is put in front of all database objects created by rubyrep.|
 |@:key_sep@| &nbsp; |'&#124;'|The string that separates columns in the key column of the change log table. Must not occure in the key columns of the replicated tables. Can consist of multiple characters.|
+|@:initial_sync@|yes|true|If true, syncs the tables when starting replication. <br/>Disable with care! (I. e. only if sure that tables have the same data in both databases before starting replication|
 |@:adjust_sequences@|yes|true|If true, adjusts the sequences of the tables to avoid duplicate key problems.|
 |@:sequence_increment@|yes|2|The increment of adjusted sequences.|
 |@:left_sequence_offset@|yes|0|Ensures that adjusted sequences in the "left" database only generate numbers with @number % sequence_increment == left_sequence_offset@|
