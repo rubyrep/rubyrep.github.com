@@ -45,6 +45,11 @@ h2. Step 2: Specify how to connect to both databases
 rubyrep always works on two databases known as "left" and "right".
 Above example should be fairly self-explaining...
 
+*Special encodings*
+If your database uses special encodings, you might want to specify them also in the connection paramters. (Apparently especially necessary with MySQL.)
+Use the @:encoding@ parameter for this.
+Refer to the according explanations for "PostreSQL":http://ar.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/PostgreSQLAdapter.html and "MySQL":http://ar.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/MysqlAdapter.html.
+
 *PostgreSQL schema support*
 If you are using PostgreSQL and your tables do not reside in the 'public' schema, add @:schema_search_path@ to the database connection parameters. Example:
 &nbsp;&nbsp; @:schema_search_path => 'accounting'@. 
