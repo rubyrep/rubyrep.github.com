@@ -39,7 +39,7 @@ h2. Replication filter
 
 h2. Example
 
-The following simple example configures rubyrep to sync / replicate only accounts with column 'id' < 100:
+The following simple example configures rubyrep to sync / replicate only accounts with a primary key < 100:
 
 <pre><code class="brush: ruby; gutter: false">
 ...
