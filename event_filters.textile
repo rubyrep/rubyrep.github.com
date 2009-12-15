@@ -5,7 +5,7 @@ title: Event filters
 h2. Event filters
 
 Event filters can be used to 
-* filter which unsynced / unreplicaed differences should be processed by rubyrep
+* filter which unsynced / unreplicated differences should be processed by rubyrep
 * implement custom sync / replication actions
 
 This is done by assigning the custom event filter to the (table specific) option @:event_filter@.
