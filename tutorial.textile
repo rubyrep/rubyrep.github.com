@@ -22,3 +22,4 @@ h2. Advanced Tasks
   (Only actualy differences go through the network; good for off-site installations.)
 * Replication between "more than two databases":replication_between_more_than_two_databases.html.
 * Coordinating rubyrep triggers with "application specific triggers":coordinating_with_application_specific_triggers.html.
+* (Useful for troubleshooting:) "Log":logging_sql.html all executed SQL commands
