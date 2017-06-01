@@ -21,10 +21,9 @@ fn1. rubyrep command startup time under JRuby is slower though (around 9 seconds
 
 h2. Installing the JRuby version
 
-Pre-condition: Java is installed (tested with version 1.6; version 1.5 might also work).
+Pre-condition: Java is installed (tested with version 1.8).
 
-# Download the latest JRuby rubyrep package from "Rubyforge":http://rubyforge.org/frs/?group_id=7932.
-  (There are different files available. Choose the ZIP package.)
+# Download the latest JRuby rubyrep package from "Bintray":https://bintray.com/rubyrep/rubyrep/rubyrep-jruby.
 # Unzip
 # Done
 
@@ -35,9 +34,9 @@ h2. Installing the standard Ruby version
 # Install the Ruby environment[1]
 # Install the database driver.
   Normally 
-  @sudo gem install postgres@
+  @sudo gem install pg@
   or
-  @sudo gem install mysql@
+  @sudo gem install mysql2@
   will do the trick.
 # Install rubyrep
   @sudo gem install rubyrep@
