@@ -97,12 +97,12 @@ The default logging policy is to log only ignored conflicts. This can be modifie
 To activate multiple options, specify them in an array:
 
 ```ruby
-    ...
-    config.options[:logged_replication_events] = [
-      :ignored_changes, 
-      :ignored_conflicts
-    ]
-    ...
+...
+config.options[:logged_replication_events] = [
+  :ignored_changes, 
+  :ignored_conflicts
+]
+...
 ```
 
 Appendix C: Complete Example
@@ -117,31 +117,31 @@ A sync with the following configuration file would
 <!-- -->
 
 ```ruby
-    RR::Initializer::run do |config|
-      config.left = {
-        :adapter  => 'postgresql', # or 'mysql'
-        :database => 'SCOTT',
-        :username => 'scott',
-        :password => 'tiger',
-        :host     => '172.16.1.1'
-      }
+RR::Initializer::run do |config|
+  config.left = {
+    :adapter  => 'postgresql', # or 'mysql'
+    :database => 'SCOTT',
+    :username => 'scott',
+    :password => 'tiger',
+    :host     => '172.16.1.1'
+  }
 
-      config.right = {
-        :adapter  => 'postgresql',
-        :database => 'SCOTT',
-        :username => 'scott',
-        :password => 'tiger',
-        :host     => '172.16.1.2'
-      }
+  config.right = {
+    :adapter  => 'postgresql',
+    :database => 'SCOTT',
+    :username => 'scott',
+    :password => 'tiger',
+    :host     => '172.16.1.2'
+  }
 
-      config.options[:sync_conflict_handling] = :right_wins
-      config.options[:replication_conflict_handling] = :right_wins
-      config.add_table_options 'emp', 
-        :sync_conflict_handling => :left_wins,
-        :replication_conflict_handling => :left_wins
-      config.include_tables /./
+  config.options[:sync_conflict_handling] = :right_wins
+  config.options[:replication_conflict_handling] = :right_wins
+  config.add_table_options 'emp', 
+    :sync_conflict_handling => :left_wins,
+    :replication_conflict_handling => :left_wins
+  config.include_tables /./
 
-    end
+end
 ```
 
 Appendix D: Further Information

@@ -49,21 +49,21 @@ Example
 The following simple example configures rubyrep to sync / replicate only accounts with a primary key &lt; 100:
 
 ```ruby
-    ...
+...
 
-    class AccountFilter
-      def before_sync(table, key, sync_helper, type, row)
-        key['id'] < 100
-      end
+class AccountFilter
+  def before_sync(table, key, sync_helper, type, row)
+    key['id'] < 100
+  end
 
-      def before_replicate(table, key, replication_helper, diff)
-        key['id'] < 100
-      end
-    end 
+  def before_replicate(table, key, replication_helper, diff)
+    key['id'] < 100
+  end
+end 
 
-    config.add_table_option 'accounts', :event_filter => AccountFilter.new
+config.add_table_option 'accounts', :event_filter => AccountFilter.new
 
-    ...   
+...   
 ```
 
 [1] It is OK to only implement one of the methods.

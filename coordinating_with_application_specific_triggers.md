@@ -69,14 +69,14 @@ Example for modification of a PostgreSQL trigger
 Add the following to the top of your application specific trigger functions:
 
 ```ruby
-    PERFORM ACTIVE FROM rr_running_flags;
-    IF FOUND THEN
-      IF (TG_OP = 'DELETE') THEN
-        RETURN OLD;
-      ELSE
-        RETURN NEW;
-      END IF;
-    END IF;
+PERFORM ACTIVE FROM rr_running_flags;
+IF FOUND THEN
+  IF (TG_OP = 'DELETE') THEN
+    RETURN OLD;
+  ELSE
+    RETURN NEW;
+  END IF;
+END IF;
 ```
 
 Example for modification of a MySQL trigger
@@ -85,9 +85,9 @@ Example for modification of a MySQL trigger
 Add the following to the top of your application specific before trigger functions:
 
 ```ruby
-    DECLARE active INT;
-    SELECT count(*) INTO active FROM rr_running_flags;
-    IF active <> 0 THEN
-      LEAVE p;
-    END IF;
+DECLARE active INT;
+SELECT count(*) INTO active FROM rr_running_flags;
+IF active <> 0 THEN
+  LEAVE p;
+END IF;
 ```

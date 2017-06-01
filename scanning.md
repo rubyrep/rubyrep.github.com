@@ -18,27 +18,27 @@ This is done with command
 This will generate a configuration file skeleton like this:
 
 ```ruby
-    RR::Initializer::run do |config|
-      config.left = {
-        :adapter  => 'postgresql', # or 'mysql'
-        :database => 'SCOTT',
-        :username => 'scott',
-        :password => 'tiger',
-        :host     => '172.16.1.1'
-      }
+RR::Initializer::run do |config|
+  config.left = {
+    :adapter  => 'postgresql', # or 'mysql'
+    :database => 'SCOTT',
+    :username => 'scott',
+    :password => 'tiger',
+    :host     => '172.16.1.1'
+  }
 
-      config.right = {
-        :adapter  => 'postgresql',
-        :database => 'SCOTT',
-        :username => 'scott',
-        :password => 'tiger',
-        :host     => '172.16.1.2'
-      }
+  config.right = {
+    :adapter  => 'postgresql',
+    :database => 'SCOTT',
+    :username => 'scott',
+    :password => 'tiger',
+    :host     => '172.16.1.2'
+  }
 
-      config.include_tables 'dept'
-      config.include_tables /^e/ # regexp matches all tables starting with e
-      # config.include_tables /./ # regexp matches all tables
-    end
+  config.include_tables 'dept'
+  config.include_tables /^e/ # regexp matches all tables starting with e
+  # config.include_tables /./ # regexp matches all tables
+end
 ```
 
 Please note that this is valid ruby code. So you can do whatever you want.
@@ -76,8 +76,8 @@ Additionally it is possible to exclude tables. Excludes always trump includes.
 Example: To match all tables except those ending with 'backup':
 
 ```ruby
-    config.include_tables /./
-    config.exclude_tables /backup$/
+config.include_tables /./
+config.exclude_tables /backup$/
 ```
 
 Step 4: Run the scan
@@ -93,8 +93,8 @@ E. g. to scan 'dept' and all tables starting with 'e':
 A scan with default options will produce output like this:
 
 ```ruby
-                                    dept 100% .........................   0
-                                     emp 100% .........................   1
+                                dept 100% .........................   0
+                                 emp 100% .........................   1
 ```
 
 Here the 'dept' table is fully in sync, while table 'emp' has one difference.

@@ -19,11 +19,11 @@ In it's simplest form, the hook can simply execute an SQL command (E. g. to disa
 Example:
 
 ```ruby
-    ...  
-    config.include_tables 'emp',
-      :before_table_sync => "SET foreign_key_checks = 0",
-      :after_table_sync => "SET foreign_key_checks = 1"
-    ...   
+...  
+config.include_tables 'emp',
+  :before_table_sync => "SET foreign_key_checks = 0",
+  :after_table_sync => "SET foreign_key_checks = 1"
+...   
 ```
 
 Ruby code as sync hook
@@ -33,12 +33,12 @@ For more freedom, ruby code can be executed during the hook.
 Example:
 
 ```ruby
-    ...  
-    config.include_tables 'emp',
-      :before_table_sync => lambda {|helper| 
-        $stderr.puts "Hook called for #{helper.left_table}."
-      } 
-    ...   
+...  
+config.include_tables 'emp',
+  :before_table_sync => lambda {|helper| 
+    $stderr.puts "Hook called for #{helper.left_table}."
+  } 
+...   
 ```
 
 For more information, please refer to the [RDoc](http://rubyrep.rubyforge.org/classes/RR/Configuration.html)

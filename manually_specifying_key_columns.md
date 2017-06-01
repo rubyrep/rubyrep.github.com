@@ -22,10 +22,10 @@ Usage examples:
 
 ```ruby
 
-    ...  
-    config.include_tables 'articles', :key => 'id'
-    config.include_tables 'articles_tags', :key => ['article_id', 'tag_id']
-    ...   
+...  
+config.include_tables 'articles', :key => 'id'
+config.include_tables 'articles_tags', :key => ['article_id', 'tag_id']
+...   
 ```
 
 :auto\_key\_limit option
@@ -44,17 +44,17 @@ then rubyrep shall automatically consider the combination of all columns of the 
 E. g. all of the options in the following example are equivalent (but with the `:auto_key_limit` versions applying to potentially more than one table):
 
 ```ruby
-    ...  
+...  
 
-     # applies to all tables with not more than 2 columns and 
-     # not having a primary key
-    config.options[:auto_key_limit] = 2
+# applies to all tables with not more than 2 columns and 
+# not having a primary key
+config.options[:auto_key_limit] = 2
 
-     # like above, but only for tables whose name contains an underscore
-    config.add_table_options /_/, :auto_key_limit => 2
+# like above, but only for tables whose name contains an underscore
+config.add_table_options /_/, :auto_key_limit => 2
 
-     # specify the key columns for this table only
-    config.include_tables 'articles_tags', :key => ['article_id', 'tag_id']
+# specify the key columns for this table only
+config.include_tables 'articles_tags', :key => ['article_id', 'tag_id']
 
-    ...   
+...   
 ```
