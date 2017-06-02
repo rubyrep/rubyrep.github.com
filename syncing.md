@@ -45,14 +45,14 @@ records:
 -   `:ignore`: no action
 -   `:delete`: delete from source database
 -   `:insert`: insert into the other database (**default behavior**)
--   ruby `Proc` object: specify custom behavior. Refer to the [RDoc](http://rubyrep.rubyforge.org/classes/RR/Syncers/TwoWaySyncer.html) on how to do this.
+-   ruby `Proc` object: specify custom behavior. Refer to the [RDoc](http://www.rubydoc.info/github/rubyrep/rubyrep/RR/Syncers/TwoWaySyncer) on how to do this.
 
 Handling of conflicts (`:sync_conflict_handling`):
 
 -   `:ignore`: no action (**default behavior**)
 -   `:left_wins`: update the record in the right database
 -   `:right_wins`: update the record in the left database
--   ruby `Proc` object: specify custom behavior. Refer to the [RDoc](http://rubyrep.rubyforge.org/classes/RR/Syncers/TwoWaySyncer.html) on how to do this.
+-   ruby `Proc` object: specify custom behavior. Refer to the [RDoc](http://www.rubydoc.info/github/rubyrep/rubyrep/RR/Syncers/TwoWaySyncer) on how to do this.
 
 Examples
 

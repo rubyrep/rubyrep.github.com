@@ -29,7 +29,7 @@ The following commands are available:
 | [sync](sync_command.html)           | Syncs records between databases                                             |
 | [uninstall](uninstall_command.html) | Removes all rubyrep tables, triggers, etc. from "left" and "right" database |
 
-[RDoc](http://rubyrep.rubyforge.org)
+[RDoc](http://www.rubydoc.info/github/rubyrep/rubyrep/)
 ------------------------------------
 
 The documentation that is automatically generated from the rubyrep source code is available [here](http://www.rubydoc.info/github/rubyrep/rubyrep/).

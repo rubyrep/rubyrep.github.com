@@ -63,7 +63,7 @@ Handling of non-conflicting "left" (`:left_change_handling`) or "right" (`:right
 
 -   `:ignore`: no action
 -   `:replicate`: apply the change to the other database (**default behaviour**)
--   ruby `Proc` object: specify custom behavior. Refer to the [RDoc](http://rubyrep.rubyforge.org/classes/RR/Replicators/TwoWayReplicator.html) on how to do this.
+-   ruby `Proc` object: specify custom behavior. Refer to the [RDoc](http://www.rubydoc.info/github/rubyrep/rubyrep/RR/Replicators/TwoWayReplicator) on how to do this.
 
 Handling of conflicts (`:replication_conflict_handling`):
 
@@ -72,7 +72,7 @@ Handling of conflicts (`:replication_conflict_handling`):
 -   `:right_wins`: apply the change from the "right" database to the "left"
 -   `:later_wins`: the more recent change will prevail.
 -   `:earlier_wins`: the earlier change will prevail.
--   ruby `Proc` object: specify custom behavior. Refer to the [RDoc](http://rubyrep.rubyforge.org/classes/RR/Replicators/TwoWayReplicator.html) on how to do this.
+-   ruby `Proc` object: specify custom behavior. Refer to the [RDoc](http://www.rubydoc.info/github/rubyrep/rubyrep/RR/Replicators/TwoWayReplicator) on how to do this.
 
 Examples
 

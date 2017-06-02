@@ -41,4 +41,4 @@ config.include_tables 'emp',
 ...   
 ```
 
-For more information, please refer to the [RDoc](http://rubyrep.rubyforge.org/classes/RR/Configuration.html)
+For more information, please refer to the [RDoc](http://www.rubydoc.info/github/rubyrep/rubyrep/RR/Configuration)

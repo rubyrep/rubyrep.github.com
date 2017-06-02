@@ -27,7 +27,7 @@ Sync filter
 
 -   `table`: name of the left table (of the sync difference)
 -   `key`: the column\_name =&gt; value hash of the primary key of the sync difference
--   `sync_helper`: a [`SyncHelper`](http://rubyrep.rubyforge.org/classes/RR/SyncHelper.html) through which the database can be accessed
+-   `sync_helper`: a [`SyncHelper`](http://www.rubydoc.info/github/rubyrep/rubyrep/RR/SyncHelper) through which the database can be accessed
 -   `type`: type of sync difference (`:left`, `:right` or `:conflict`)
 -   `row`:
     -   for `:left` or `:right` differences: the column\_name =&gt; value pairs of the unsynced row
@@ -40,8 +40,8 @@ Replication filter
 
 -   `table`: name of the left table (of the unreplicated change)
 -   `key`: the column\_name =&gt; value hash of the primary key of the changed row
--   `replication_helper`: a [`ReplicationHelper`](http://rubyrep.rubyforge.org/classes/RR/ReplicationHelper.html) enabling database access
--   `diff`: the [`ReplicationDifference`](http://rubyrep.rubyforge.org/classes/RR/ReplicationDifference.html) describing the unreplicated change.
+-   `replication_helper`: a [`ReplicationHelper`](http://www.rubydoc.info/github/rubyrep/rubyrep/RR/ReplicationHelper) enabling database access
+-   `diff`: the [`ReplicationDifference`](http://www.rubydoc.info/github/rubyrep/rubyrep/RR/ReplicationDifference) describing the unreplicated change.
 
 Example
 -------
